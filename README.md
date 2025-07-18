@@ -1,6 +1,5 @@
-#BookManagementAPI 
-A simple, lightweight RESTful API built with Go and the Gin web framework to manage a collection of books stored directly in memory. The API supports full CRUD operations, proper validation, error handling, and custom middleware for logging and request timeouts.
 
+A simple, lightweight RESTful API built with Go and the Gin web framework to manage a collection of books stored directly in memory. The API supports full CRUD operations, proper validation, error handling, and custom middleware for logging and request timeouts.
 
 🚀 Features
 📖 View all books or a specific book by ID
