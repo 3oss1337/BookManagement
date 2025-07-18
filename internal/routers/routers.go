@@ -1,13 +1,15 @@
-package internal
+package routers
 
-import ("github.com/gin-gonic/gin"
-"github.com/3oss1337/BookManagement/internal/handlers")
+import (
+	"github.com/3oss1337/BookManagement/internal/handlers"
+	"github.com/gin-gonic/gin"
+)
 
 func Routers(r *gin.Engine) {
-	r.GET("/books", getListOfBooks)
-	r.GET("/books/:id", getBookByID)
-	r.POST("/books", CreateBook)
-	r.PUT("/books/:id", UpdateBook)
-	r.DELETE("/books/:id", DeleteBook)
+	r.GET("/books", handlers.GetListOfBooks)
+	r.GET("/books/:id", handlers.GetBookByID)
+	r.POST("/books", handlers.CreateBook)
+	r.PUT("/books/:id", handlers.UpdateBook)
+	r.DELETE("/books/:id", handlers.DeleteBook)
 
 }

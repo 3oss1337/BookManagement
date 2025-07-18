@@ -1,4 +1,4 @@
-package internal
+package books
 
 type Book struct {
 	ID     int    `json:"id"`
@@ -7,6 +7,6 @@ type Book struct {
 	Year   int    `json:"year"`
 }
 
-var booksList = make(map[int]Book)
+var BooksList = make(map[int]Book)
 
-var NextID int
+var NextID int = 1
