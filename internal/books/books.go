@@ -9,4 +9,4 @@ type Book struct {
 
 var booksList = make(map[int]Book)
 
-//var NextID id
+var NextID int
