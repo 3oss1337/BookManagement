@@ -1,8 +1,9 @@
-package books
+package internal
 
-import "github.com/gin-gonic/gin"
+import ("github.com/gin-gonic/gin"
+"github.com/3oss1337/BookManagement/internal/handlers")
 
-func RegisterRoutes(r *gin.Engine) {
+func Routers(r *gin.Engine) {
 	r.GET("/books", getListOfBooks)
 	r.GET("/books/:id", getBookByID)
 	r.POST("/books", CreateBook)
