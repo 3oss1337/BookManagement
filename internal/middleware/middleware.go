@@ -12,8 +12,8 @@ func RequestLogger() gin.HandlerFunc {
 	}
 }
 
-// func Timeout() gin.HandlerFunc {
-// 	return func (c *gin.Context){
-// 		var timeout = context.WithTimeout(c.Request.Context(),2*time.Second)
-// 	}
-// }
+func Timeout() gin.HandlerFunc {
+	// 	return func (c *gin.Context){
+	// 		var timeout = context.WithTimeout(c.Request.Context(),2*time.Second)
+	// 	}
+}

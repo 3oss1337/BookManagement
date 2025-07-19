@@ -18,7 +18,7 @@ func GetBookByID(c *gin.Context) {
 	var idParam string = c.Param("id")
 	id, err := strconv.Atoi(idParam)
 	if err != nil {
-		c.JSON(http.StatusBadRequest, gin.H{"Error": "Invalid book ID"})
+		c.JSON(http.StatusNotFound, gin.H{"Error": "Invalid book ID"})
 		return
 	}
 	currBook := books.BooksList[id]
@@ -75,7 +75,7 @@ func DeleteBook(c *gin.Context) {
 	}
 	_, exists := books.BooksList[id]
 	if !exists {
-		c.JSON(http.StatusBadRequest, gin.H{"Error": "Book not found"})
+		c.JSON(http.StatusNotFound, gin.H{"Error": "Book not found"})
 		return
 	}
 	delete(books.BooksList, id)
