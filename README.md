@@ -38,22 +38,14 @@ Go installed
 🔧 Steps:
 Clone the repository:
 
-bash
-Copy
-Edit
 git clone https://github.com/your-username/book-management-api.git
 cd book-management-api
+
+
 Download dependencies:
-
-bash
-Copy
-Edit
 go mod tidy
-Run the server:
 
-bash
-Copy
-Edit
+Run the server:
 go run ./cmd/server
-Visit http://localhost:8080/books to test the API.
+Visit http://localhost:8000/books to test the API.
 
