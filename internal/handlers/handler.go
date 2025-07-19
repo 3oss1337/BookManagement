@@ -1,6 +1,7 @@
 package handlers
 
 import (
+	"fmt"
 	"net/http"
 	"strconv"
 
@@ -36,6 +37,7 @@ func CreateBook(c *gin.Context) {
 	}
 	if newBook.Title == "" || newBook.Author == "" || newBook.Year <= 0 {
 		c.JSON(http.StatusBadRequest, gin.H{"Error": "Title and Author must not be empty, and Year must be greater than 0"})
+		return
 	}
 	newBook.ID = books.NextID
 	books.BooksList[newBook.ID] = newBook
@@ -62,6 +64,7 @@ func UpdateBook(c *gin.Context) {
 	}
 	newBookDetails.ID = id
 	books.BooksList[id] = newBookDetails
+	fmt.Println("Book updated successfully")
 	c.JSON(http.StatusOK, newBookDetails)
 
 }
