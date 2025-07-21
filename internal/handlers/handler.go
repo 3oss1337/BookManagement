@@ -22,6 +22,10 @@ func GetBookByID(c *gin.Context) {
 		c.JSON(http.StatusNotFound, gin.H{"Error": "Invalid book ID"})
 		return
 	}
+	if id > len(books.BooksList) {
+		c.JSON(http.StatusNotFound, gin.H{"Error": "Book not found"})
+		return
+	}
 	currBook := books.BooksList[id]
 
 	c.JSON(http.StatusOK, currBook)
